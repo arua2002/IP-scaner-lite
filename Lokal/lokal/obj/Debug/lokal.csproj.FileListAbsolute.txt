@@ -1,0 +1,13 @@
+C:\Users\tagir\source\repos\lokal\lokal\bin\Debug\lokal.exe.config
+C:\Users\tagir\source\repos\lokal\lokal\bin\Debug\lokal.exe
+C:\Users\tagir\source\repos\lokal\lokal\bin\Debug\lokal.pdb
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.csproj.AssemblyReference.cache
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.Form1.resources
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.Properties.Resources.resources
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.csproj.GenerateResource.cache
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.csproj.CoreCompileInputs.cache
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.exe
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.pdb
+C:\Users\tagir\source\repos\lokal\lokal\bin\Debug\Microsoft.Management.Infrastructure.dll
+C:\Users\tagir\source\repos\lokal\lokal\bin\Debug\system.management.automation.dll
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.csproj.CopyComplete
