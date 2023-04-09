@@ -12,3 +12,5 @@
 # Тут показан меню выбора действий
 
 ![image](https://user-images.githubusercontent.com/90987143/229342109-2b5b36ba-8cd7-449d-9a66-65a4b2f45f17.png)
+
+![image](https://user-images.githubusercontent.com/90987143/230775018-2783f86d-0195-4f90-bdb0-c5fec95ca4f9.png)
