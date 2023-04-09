@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Net.NetworkInformation;
 using System.Net;
+using System.Collections.Generic;
 using System.Threading;
 namespace lokal
 {
@@ -31,7 +32,7 @@ namespace lokal
         private void pinger()
         {         
             while (a)
-            {
+            {            
                 string ip = $"192.168.{x}.{t2}";
                 r = ping.Send(ip, 500);
                 if (r.Status == IPStatus.Success)
@@ -45,25 +46,26 @@ namespace lokal
                         if (c == x1)
                         {
                             настройкаToolStripMenuItem.Enabled = true;
-                            break;
+                            a = false;
                         }
-                        else
-                        {
-                            c++;
-                        }
+                        else c++;                       
                     }
                     catch (Exception)
                     {
 
                     }
                 }
-                t2++;
-                t1 = t2;
+               if(a) t2++;
             }    
         }    
         private void timer1_Tick(object sender, EventArgs e)
-        {               
-                for (int i = 0; i < x1; i++)
+        {
+            if (t2 >= x1)
+            {
+                timer1.Enabled = false;
+                label1.Text = $"Готово";
+            }
+            for (int i = 0; i < x1; i++)
                 {
                     if (mass[i, 0] != "")
                     {
@@ -71,16 +73,19 @@ namespace lokal
                         dataGridView1.Rows[i].Cells[1].Value = mass[i, 1];
                         dataGridView1.Rows[i].Cells[2].Value = mass[i, 2];
                     }
-                }
-                label2.Text = $"Найдено : {c}";
-                label1.Text = $"пройдено {t1} из {x1}";
-                progressBar1.Value = t1;
-            if (t1 == x1)
-            {
-                timer1.Enabled = false;
-                label1.Text = $"Готово";
             }
+                label2.Text = $"Найдено : {c}";
+                label1.Text = $"пройдено {t2} из {x1}";              
 
+           
+           if(t2<=x1) progressBar1.Value = t2;
+           else  progressBar1.Value = x1;
+            if (t2 >= x1)
+            {
+                label1.Text = $"Готово";
+                настройкаToolStripMenuItem.Enabled = true;
+                a = false;
+            }
         }
         bool tr = false;
         private void пускстопToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +112,7 @@ namespace lokal
         }
         void settins()
         {
+            for (int i = 0; i < dataGridView1.RowCount; i++) for (int j = 0; j < 3; j++) dataGridView1.Rows[i].Cells[j].Value = "";
             x = Convert.ToInt32(textBox1.Text);//область
             y = Convert.ToInt32(textBox2.Text);//min
             x1 = Convert.ToInt32(textBox3.Text);//max
@@ -115,6 +121,7 @@ namespace lokal
             mass = new string[x1, 3];
             dataGridView1.RowCount = x1;
             progressBar1.Value = y;
+            c = 0;
             t2 = y;
         }
         void restart()
@@ -124,13 +131,21 @@ namespace lokal
             progressBar1.Value = y;
             timer1.Enabled = true;
             c = 0;
-            t2 = y-1;
+            t2 = y;
         }
         private void button1_Click(object sender, EventArgs e)//принять новые настройки
         {
             settins();
             Width = 500;
+
         }
+
+        private void поискToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.Show();
+        }
+
         bool w = false;
         private void настройкаToolStripMenuItem_Click(object sender, EventArgs e)//открыть и закрыть меню настроек
         {

@@ -44,6 +44,7 @@ namespace lokal
             this.пускстопToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.перезапуститьПроцессToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -127,7 +128,8 @@ namespace lokal
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.действиеToolStripMenuItem});
+            this.действиеToolStripMenuItem,
+            this.поискToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(733, 24);
@@ -164,6 +166,13 @@ namespace lokal
             this.настройкаToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.настройкаToolStripMenuItem.Text = "настройка";
             this.настройкаToolStripMenuItem.Click += new System.EventHandler(this.настройкаToolStripMenuItem_Click);
+            // 
+            // поискToolStripMenuItem
+            // 
+            this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
+            this.поискToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.поискToolStripMenuItem.Text = "поиск";
+            this.поискToolStripMenuItem.Click += new System.EventHandler(this.поискToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -207,7 +216,7 @@ namespace lokal
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(25, 20);
             this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "254";
+            this.textBox3.Text = "2";
             // 
             // label7
             // 
@@ -269,9 +278,9 @@ namespace lokal
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(155, 73);
+            this.button1.Location = new System.Drawing.Point(134, 73);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "подтвердить";
             this.button1.UseVisualStyleBackColor = true;
@@ -328,6 +337,7 @@ namespace lokal
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
     }
 }
 

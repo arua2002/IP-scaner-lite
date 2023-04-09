@@ -11,3 +11,4 @@ C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.pdb
 C:\Users\tagir\source\repos\lokal\lokal\bin\Debug\Microsoft.Management.Infrastructure.dll
 C:\Users\tagir\source\repos\lokal\lokal\bin\Debug\system.management.automation.dll
 C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.csproj.CopyComplete
+C:\Users\tagir\source\repos\lokal\lokal\obj\Debug\lokal.Form2.resources
